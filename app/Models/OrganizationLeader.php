@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-#[Fillable(['Leader_name', 'organization_id'])]
+#[Fillable(['leader_name', 'organization_id'])]
 class OrganizationLeader extends Model
 {
     /** @use HasFactory<\Database\Factories\OrganizationLeaderFactory> */
     use HasFactory, HasUuids;
 
-    public function organizatiom(): BelongsTo
+    public function organization(): BelongsTo
     {
         return $this->belongsTo(Organization::class);
     }

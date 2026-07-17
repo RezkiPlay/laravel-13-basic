@@ -14,7 +14,7 @@
 
         @foreach ($organization as $organization)
             <li class="list-group-item">
-                {{ $loop->iteration }}.{{ $organization->organizationLeader->leader_name }}-- {{ $organization->name }}
+                {{ $loop->iteration }}.{{ $organization->organizationLeader?->leader_name }}-- {{ $organization->name }}
                 <a class="btn btn-warning btn-sm" href="{{ route('organization.edit', $organization) }}"
                     role="button">edit</a>
                 <form action="{{ route('organization.destroy', $organization) }}" method="POST" class="d-inline">
